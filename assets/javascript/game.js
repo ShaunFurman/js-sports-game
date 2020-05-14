@@ -1,3 +1,14 @@
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
+random_bg_color();
+
 let teamoneshootButton = document.querySelector("#teamoneshootbutton"); 
 let teamtwoshootButton = document.querySelector("#teamtwoshootbutton");
     let teamonegoals = document.querySelector("#teamone-numgoals");
@@ -13,6 +24,7 @@ teamoneshootButton.addEventListener("click", function() {
     console.log("+ button clicked");
     let newCounterValue = Number(counter1.innerHTML) + 1;
     counter1.innerHTML = newCounterValue
+    
     if (Math.random() > .5) {
         let newGoals = Number(teamonegoals.innerHTML) + 1
         teamonegoals.innerHTML = newGoals
@@ -20,6 +32,10 @@ teamoneshootButton.addEventListener("click", function() {
             console.log("+ Random number");
 
 })
+// if (counter1 = 10) {
+//     let teamoneshootButton = teamoneshootButton.innerHTML = "GAME OVER";
+//         // console.log("GAME OVER")
+// }
 //TWO
 
 teamtwoshootButton.addEventListener("click", function() {
